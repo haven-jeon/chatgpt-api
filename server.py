@@ -10,7 +10,7 @@ from playwright.sync_api import sync_playwright
 
 APP = flask.Flask(__name__)
 PLAY = sync_playwright().start()
-BROWSER = PLAY.chromium.launch_persistent_context(
+BROWSER = PLAY.firefox.launch_persistent_context(
     user_data_dir="/tmp/playwright",
     headless=False,
 )
